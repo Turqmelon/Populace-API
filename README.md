@@ -188,11 +188,11 @@ Fired whenever a town is destroyed
 This event is fired when the town spawn is updated. **Important:** This event is NOT fired when the spawn is set automatically by Populace. (ie, on first land claim)
 
 ### TownUnclaimLandEvent
-**Cancellable** Yes, prevents the land from being unclaimed.
+**Cancellable** Yes, prevents the land from being unclaimed. (Unless it's during town destruction, in which case the cancelled state is ignored.)
 
 **Available Data**
 * The town unclaiming the land (getTown())
 * The resident who is unclaiming the land on behalf of the town (getResident())
 * The plot that would be unclaimed (getPlot())
 
-Fired whenever a town attempts to unclaim land (making it wilderness)
+Fired whenever a town attempts to unclaim land (making it wilderness) **Important:** This event is fired for every plot in a town when the town is destroyed, HOWEVER: setting it to cancelled during this will be ignored. Town destruction can't be cancelled.
