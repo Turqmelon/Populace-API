@@ -1,6 +1,71 @@
 # Populace-API
 API Documentation for the upcoming Populace plugin
 
+## Definitions
+
+* **Resident** A player within Populace
+* **Plot** A chunk of claimed land
+* **Town** A town within populace
+
+## Working with Residents
+All resident data can be acquired from the **ResidentManager**.
+
+**By Name**
+```java 
+Resident resident = ResidentManager.getResident("PlayerName"); 
+```
+**By UUID**
+```java 
+Resident resident = ResidentManager.getResident(UUID.randomUUID()); 
+```
+**By Online Player**
+```java 
+Resident resident = ResidentManager.getResident(player); 
+```
+
+All will return null if no data matches the provided query.
+
+## Working with Plots
+Populace stores locations of Plots using **PlotChunk**s for performance reasons. A Plot Chunk contains a chunk's world, X coordinate, and Z coordinate.
+
+All plot data can be acquired from the **PlotManager**.
+
+**By PlotChunk**
+```java 
+World world = Bukkit.getWorld("world");
+Plot plot = PlotManager.getPlot(new PlotChunk(world, 0, 0));
+```
+
+**By Chunk**
+```java 
+World world = Bukkit.getWorld("world");
+Chunk chunk = world.getChunkAt(0, 0);
+Plot plot = PlotManager.getPlot(chunk);
+```
+
+**By Raw Coordinates**
+```java 
+World world = Bukkit.getWorld("world");
+Plot plot = PlotManager.getPlot(world, 0, 0);
+```
+
+All will return null if the location hasn't been claimed.
+
+#### Getting a Town by Location
+```java 
+Player player = // my player
+Location location = player.getLocation();
+Chunk chunk = location.getChunk();
+Plot plot = PlotManager.getPlot(chunk);
+if (plot != null) { // Make sure this land is claimed
+  Town town = plot.getTown();
+  // More code
+}
+else{
+  // It's wilderness
+}
+```
+
 ## Events
 Events are fired by bukkit when certain actions are performed within Populace. Important Populace then you can listen for any of these events like normal bukkit events.
 
