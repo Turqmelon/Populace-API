@@ -1,6 +1,14 @@
 # Populace-API
 API Documentation for the upcoming Populace plugin
 
+## Message Formatting
+To keep messages consistent, please use the **Msg** static class to prefix your messages you send to the player.
+
+* **Msg.OK** A lime green message
+* **Msg.INFO** An aqua message
+* **Msg.WARN** A gold message
+* **Msg.ERR** A red message
+
 ## Definitions
 
 * **Resident** A player within Populace
