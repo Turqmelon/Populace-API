@@ -1,6 +1,99 @@
 # Populace-API
 API Documentation for the upcoming Populace plugin
 
+## Permissions
+Permissions will dynamically control the commands that users have access to, as well as alter the in-game GUIs to suite your choices.
+
+#### populace.commands.allow
+Grants access to **/allow**, for adding friends to plots.
+
+#### populace.commands.claim
+Grants access to **/claim**, for claiming new land
+
+#### populace.commands.claim.radius
+Grants access to **/claim [#]**, for lots of new land at once
+
+#### populace.commands.forsale
+Grants access to **/forsale**, for selling plots to residents
+
+#### populace.commands.giveplot
+Grants access to **/giveplot**, for allowing town staff to give plot ownership to residents
+
+#### populace.commands.invite
+Grants access to **/invite**, for inviting new residents to town
+
+#### populace.commands.jail
+Grants access to **/jail**, for allowing town staff to jail misbehaving residents
+
+#### populace.commands.join
+Grants access to **/join**, for joining towns
+
+#### populace.commands.map
+Grants access to **/map**, for spawning maps of their town
+
+#### populace.commands.newtown
+Grants access to **/newtown**, for creating towns
+
+#### populace.commands.notforsale
+Grants access to **/notforsale**, for taking plots off the market
+
+#### populace.commands.plot
+Grants access to **/plot**, for changing plot settings
+
+#### populace.save
+Grants access to **/populace save**, for saving Populace Core's data
+
+#### populace.commands.resident
+Grants access to **/resident**, for viewing resident info
+
+#### populace.commands.resident.viewplots
+Grants access to seeing the plots that residents own when viewing their profile
+
+#### populace.commands.setjail
+Grants access to **/setjail**, for allowing town mayors to set their town's jail
+
+#### populace.commands.town
+Grants access to **/town**, for allowing viewing town details and changing settings
+
+#### populace.commands.towns
+Grants access to **/towns**, for showing all towns on the server
+
+#### populace.commands.unclaim
+Grants access to **/unclaim**, for unclaiming land
+
+#### populace.commands.unjail
+Grants access to **/unjail**, for allowing town staff to free jailed residents
+
+#### populace.commands.visit
+Grants access to **/visit**, for visiting town spawn
+
+#### populace.commands.visit.other
+Grants access to **/visit [Town]**, for visiting other towns
+
+#### populace.commands.visualize
+Grants access to **/visualize**, for requesting a visualiztion of a chunk whenever
+
+#### populace.plottypes.residential
+Grants access to making Residential plots.
+
+#### populace.plottypes.merchant
+Grants access to making Merchant plots. (If PopulaceMarket is installed.)
+
+#### populace.plottypes.battle
+Grants access to making Battle plots.
+
+#### populace.plottypes.outpost
+Grants access to making Outpost plots. (If a town has reached the City level.)
+
+#### populace.bypass
+Bypasses all land and town permission checks
+
+#### populace.teleportation.nowarmup
+There is no warmup time when teleporting
+
+#### populace.teleportation.nocooldown
+There is no cooldown time until the next teleport
+
 ## Message Formatting
 To keep messages consistent, please use the **Msg** static class to prefix your messages you send to the player.
 
